@@ -53,10 +53,16 @@ export function ToolsChart() {
           color: colors.orange[600],
           stroke: colors.orange[800],
         },
+        {
+          label: "Figma",
+          value: 20,
+          color: colors.pink[600],
+          stroke: colors.pink[800],
+        },
       ]}
       colorField="label"
       angleField="value"
-      innerRadius={0.7}
+      innerRadius={0.6}
       legend={false}
       tooltip={false}
       label={{

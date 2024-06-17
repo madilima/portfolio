@@ -5,9 +5,14 @@ import classNames from "classnames";
 import {
   ArrowRightOutlined,
   BookOutlined,
+  CheckOutlined,
+  ConsoleSqlOutlined,
+  DockerOutlined,
   FileDoneOutlined,
   GithubOutlined,
   InstagramOutlined,
+  JavaOutlined,
+  JavaScriptOutlined,
   LinkedinOutlined,
   MailOutlined,
   WhatsAppOutlined,
@@ -20,6 +25,10 @@ import { Certificates } from "./components/certificates";
 import { Certificate } from "./components/certificate";
 import { ToolsChart } from "./components/tools-chart";
 import { TechChart } from "./components/techchart";
+import posttrack from "./assets/projects/img/posttrack.png"
+import pizzas from "./assets/projects/img/pizzas.png"
+import shopp from "./assets/projects/img/shopp.png"
+
 
 injectOneko();
 
@@ -61,7 +70,9 @@ export function App() {
         <Section className="text-center h-32">
           <div className="text-3xl ">
             I am <a className="text-teal-400">Maria Pereira</a>
-            <p className="text-base">Systems Analysis and Development Student</p>
+            <p className="text-base">
+              Systems Analysis and Development Student
+            </p>
           </div>
 
           <div className="space-x-6 space-y-7 ">
@@ -107,7 +118,7 @@ export function App() {
             </div>
           </Section>
 
-          <Image src={port}  />
+          <Image src={port} />
         </div>
 
         <Section className="bg-black text-base mt-[10vh] h-80 flex flex-col gap-4">
@@ -116,7 +127,7 @@ export function App() {
           </div>
 
           <div className="text-2xl text-center">
-            Systems Analysis and Development 
+            Systems Analysis and Development
           </div>
 
           <Button
@@ -129,7 +140,10 @@ export function App() {
           </Button>
 
           <div className="mt-4">
-          <p className="text-teal-400"> <ArrowRightOutlined /> Universidade do Vale do Rio dos Sinos</p>
+            <p className="text-teal-400">
+              {" "}
+              <ArrowRightOutlined /> Universidade do Vale do Rio dos Sinos
+            </p>
             <p>
               <ArrowRightOutlined /> Completion estimate:{" "}
               <a className="text-teal-400">2026</a>
@@ -183,14 +197,110 @@ export function App() {
 
         <Section className=" border-none mt-[20vh] h-auto">
           <div>
+            <div className="text-3xl text-center text-teal-400 font-semibold">
+              {" "}
+              TOOLS{" "}
+            </div>
             <ToolsChart />
           </div>
         </Section>
+
         <Section className=" border-none mt-[20vh] h-auto">
           <div>
+            <div className="text-3xl text-center text-teal-400 font-semibold">
+              {" "}
+              TECHNOLOGY{" "}
+            </div>
             <TechChart />
           </div>
         </Section>
+
+        <div className="flex gap-8 mt-4 items-center">
+          <Section className="bg-black w-1/2 text-base">
+            <div className="text-3xl text-center text-teal-400 font-semibold">
+              POST TRACK
+              <Image src={posttrack} />
+            </div>
+            <div>
+              {" "}
+              <p className="p-2">
+                <DockerOutlined />
+              </p>
+              <a className="p-2">
+                <CheckOutlined /> TypeScript
+              </a>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> Groovy
+                </a>
+              </p>
+              <p className="p-2">
+                Web application for monitoring social networks, evaluating the
+                sentiment of comments and presenting reports for subsequent
+                analysis.
+              </p>
+              <a className="p-2.5" href="https://github.com/gustavoharff/post-track"><GithubOutlined /></a>
+            </div>
+          </Section>
+
+          <Section className="bg-black w-1/2 text-base">
+            <div className="text-3xl text-center text-teal-400 font-semibold">
+              Shopping Center
+              <Image src={shopp} />
+            </div>
+            <div>
+              {" "}
+              <p className="p-2">
+                <JavaOutlined />
+                <ConsoleSqlOutlined />
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> Java
+                </a>
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> IntelliJ
+                </a>
+              </p>
+              <p className="p-2">
+                Project created 100% in Java. The system records the operation
+                of a shopping mall, its stores and employee records.
+              </p>
+              <a className="p-2.5" href="https://github.com/madilima/shopping-center"><GithubOutlined /></a>
+            </div>
+          </Section>
+          <Section className="bg-black w-1/2 text-base">
+            <div className="text-3xl text-center text-teal-400 font-semibold">
+              Pizza Shopp
+              <Image src={pizzas} />
+            </div>
+            <div>
+              {" "}
+              <p className="p-2">
+                <JavaScriptOutlined />
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> TypeScript
+                </a>
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> CSS
+                </a>
+              </p>
+              <p className="p-2">
+                Establishment registration,
+                order management, metrics for dashboard, graph of orders in the
+                last 15 days and graph of values over the last 15 days, and
+                average reviews (month/general);
+              </p>
+              <a className="p-2.5" href="https://github.com/madilima/pizzashop-web"><GithubOutlined /></a>
+            </div>
+          </Section>
+        </div>
       </div>
     </div>
   );

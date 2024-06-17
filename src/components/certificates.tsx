@@ -28,6 +28,11 @@ export function Certificates() {
   };
 
   return (
+    <Image.PreviewGroup
+    preview={{
+      onChange: (current, prev) => console.log(`current index: ${current}, prev index: ${prev}`),
+    }}
+  >
     <div>
       {current === 1 ? (<div className="flex gap-8">
         <Image src={back}  width={400} />
@@ -59,5 +64,6 @@ export function Certificates() {
       </div>) : null}
       <Pagination className="mt-4 text-center" current={current} onChange={onChange} total={50} />
     </div>
+    </Image.PreviewGroup>
   );
 }
