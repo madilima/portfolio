@@ -75,7 +75,7 @@ export function App() {
             </p>
           </div>
 
-          <div className="space-x-6 space-y-7 ">
+          <div className="space-x-8 p-7">
             <a href="https://github.com/madilima" target="_blank">
               {" "}
               <GithubOutlined />{" "}
@@ -92,7 +92,10 @@ export function App() {
               {" "}
               <WhatsAppOutlined />{" "}
             </a>
-            <MailOutlined />
+            <a href="mailto:madulpereira28@hotmail.com">
+              {" "}
+              <MailOutlined />{" "}
+            </a>
           </div>
         </Section>
 
@@ -121,7 +124,7 @@ export function App() {
           <Image src={port} />
         </div>
 
-        <Section className="bg-black text-base mt-[10vh] h-80 flex flex-col gap-4">
+        <Section className="bg-black text-base mt-[10vh] h-auto flex flex-col gap-4">
           <div className="text-3xl text-center text-teal-400 font-semibold">
             EDUCATION
           </div>
@@ -215,11 +218,11 @@ export function App() {
           </div>
         </Section>
 
-        <div className="flex gap-8 mt-4 items-center">
+        <div className="flex gap-8 mt-[20vh] items-center">
           <Section className="bg-black w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               POST TRACK
-              <Image  src={posttrack} />
+              <Image src={posttrack} />
             </div>
             <div>
               {" "}
@@ -283,6 +286,39 @@ export function App() {
           </Section>
           <Section className="bg-black w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
+              React
+              <Image src={react} />
+            </div>
+            <div>
+              {" "}
+              <p className="p-2">
+                <JavaScriptOutlined />
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> JavaScript
+                </a>
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> CSS
+                </a>
+              </p>
+              <p className="p-2">
+                Project made for the community to be able to post links,
+                messages, and projects, also with the option to like and
+                comment.
+              </p>
+              <a
+                className="p-2.5"
+                href="https://github.com/madilima/ignite-react"
+              >
+                <GithubOutlined />
+              </a>
+            </div>
+          </Section>
+          <Section className="bg-black w-1/2 text-base">
+            <div className="text-3xl text-center text-teal-400 font-semibold">
               Pizza Shopp
               <Image src={pizzas} />
             </div>
@@ -310,39 +346,6 @@ export function App() {
               <a
                 className="p-2.5"
                 href="https://github.com/madilima/pizzashop-web"
-              >
-                <GithubOutlined />
-              </a>
-            </div>
-          </Section>
-          <Section className="bg-black w-1/2 text-base">
-            <div className="text-3xl text-center text-teal-400 font-semibold">
-              React
-              <Image src={react} />
-            </div>
-            <div>
-              {" "}
-              <p className="p-2">
-                <JavaScriptOutlined />
-              </p>
-              <p>
-                <a className="p-2">
-                  <CheckOutlined /> JavaScript
-                </a>
-              </p>
-              <p>
-                <a className="p-2">
-                  <CheckOutlined /> CSS
-                </a>
-              </p>
-              <p className="p-2">
-                Project made for the community to be able to post links,
-                messages, and projects, also with the option to like and
-                comment.
-              </p>
-              <a
-                className="p-2.5"
-                href="https://github.com/madilima/ignite-react"
               >
                 <GithubOutlined />
               </a>
