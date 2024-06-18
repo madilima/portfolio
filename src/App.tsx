@@ -25,10 +25,10 @@ import { Certificates } from "./components/certificates";
 import { Certificate } from "./components/certificate";
 import { ToolsChart } from "./components/tools-chart";
 import { TechChart } from "./components/techchart";
-import posttrack from "./assets/projects/img/posttrack.png"
-import pizzas from "./assets/projects/img/pizzas.png"
-import shopp from "./assets/projects/img/shopp.png"
-
+import posttrack from "./assets/projects/img/posttrack.png";
+import pizzas from "./assets/projects/img/pizzas.png";
+import shopp from "./assets/projects/img/shopp.png";
+import react from "./assets/projects/img/react.png";
 
 injectOneko();
 
@@ -219,7 +219,7 @@ export function App() {
           <Section className="bg-black w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               POST TRACK
-              <Image src={posttrack} />
+              <Image  src={posttrack} />
             </div>
             <div>
               {" "}
@@ -239,7 +239,12 @@ export function App() {
                 sentiment of comments and presenting reports for subsequent
                 analysis.
               </p>
-              <a className="p-2.5" href="https://github.com/gustavoharff/post-track"><GithubOutlined /></a>
+              <a
+                className="p-2.5"
+                href="https://github.com/gustavoharff/post-track"
+              >
+                <GithubOutlined />
+              </a>
             </div>
           </Section>
 
@@ -268,7 +273,12 @@ export function App() {
                 Project created 100% in Java. The system records the operation
                 of a shopping mall, its stores and employee records.
               </p>
-              <a className="p-2.5" href="https://github.com/madilima/shopping-center"><GithubOutlined /></a>
+              <a
+                className="p-2.5"
+                href="https://github.com/madilima/shopping-center"
+              >
+                <GithubOutlined />
+              </a>
             </div>
           </Section>
           <Section className="bg-black w-1/2 text-base">
@@ -292,12 +302,50 @@ export function App() {
                 </a>
               </p>
               <p className="p-2">
-                Establishment registration,
-                order management, metrics for dashboard, graph of orders in the
-                last 15 days and graph of values over the last 15 days, and
-                average reviews (month/general);
+                Establishment registration, order management, metrics for
+                dashboard, graph of orders in the last 15 days and graph of
+                values over the last 15 days, and average reviews
+                (month/general).
               </p>
-              <a className="p-2.5" href="https://github.com/madilima/pizzashop-web"><GithubOutlined /></a>
+              <a
+                className="p-2.5"
+                href="https://github.com/madilima/pizzashop-web"
+              >
+                <GithubOutlined />
+              </a>
+            </div>
+          </Section>
+          <Section className="bg-black w-1/2 text-base">
+            <div className="text-3xl text-center text-teal-400 font-semibold">
+              React
+              <Image src={react} />
+            </div>
+            <div>
+              {" "}
+              <p className="p-2">
+                <JavaScriptOutlined />
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> JavaScript
+                </a>
+              </p>
+              <p>
+                <a className="p-2">
+                  <CheckOutlined /> CSS
+                </a>
+              </p>
+              <p className="p-2">
+                Project made for the community to be able to post links,
+                messages, and projects, also with the option to like and
+                comment.
+              </p>
+              <a
+                className="p-2.5"
+                href="https://github.com/madilima/ignite-react"
+              >
+                <GithubOutlined />
+              </a>
             </div>
           </Section>
         </div>
