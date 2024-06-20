@@ -18,7 +18,9 @@ import {
   WhatsAppOutlined,
 } from "@ant-design/icons";
 import { Button, Modal, Image } from "antd";
-
+import Lottie from "lottie-react";
+import codingPerson from "./assets/codingPerson.json"
+import build from "./assets/build.json"
 import port from "./assets/img/port.png";
 import { Subjects } from "./components/subjects";
 import { Certificates } from "./components/certificates";
@@ -29,6 +31,8 @@ import posttrack from "./assets/projects/img/posttrack.png";
 import pizzas from "./assets/projects/img/pizzas.png";
 import shopp from "./assets/projects/img/shopp.png";
 import react from "./assets/projects/img/react.png";
+// import { Skills } from "./components/skills/skill";
+// import { SkillsSideB } from "./components/skills/skillb";
 
 injectOneko();
 
@@ -67,7 +71,7 @@ export function App() {
       <Particles />
 
       <div className="absolute w-full flex flex-col gap-8 p-8 overflow-y-hidden overflow-x-hidden">
-        <Section className="text-center h-32">
+        <Section className="text-center">
           <div className="text-3xl ">
             I am <a className="text-teal-400">Maria Pereira</a>
             <p className="text-base">
@@ -75,32 +79,27 @@ export function App() {
             </p>
           </div>
 
-          <div className="space-x-8 p-7">
+          <div className="space-x-8 mt-6 text-xl">
             <a href="https://github.com/madilima" target="_blank">
-              {" "}
-              <GithubOutlined />{" "}
+              <GithubOutlined />
             </a>
             <a href="https://www.instagram.com/m_itsm3/" target="_blank">
-              {" "}
               <InstagramOutlined />
             </a>
             <a href="https://www.linkedin.com/in/madi-pereira/" target="_blank">
-              {" "}
-              <LinkedinOutlined />{" "}
+              <LinkedinOutlined />
             </a>
             <a href="https://wa.me/5551999040062" target="_blank">
-              {" "}
-              <WhatsAppOutlined />{" "}
+              <WhatsAppOutlined />
             </a>
             <a href="mailto:madulpereira28@hotmail.com">
-              {" "}
-              <MailOutlined />{" "}
+              <MailOutlined />
             </a>
           </div>
         </Section>
 
         <div className="flex gap-8 mt-4 items-center">
-          <Section className="bg-black w-1/2 text-base">
+          <Section className="w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               ABOUT ME
             </div>
@@ -123,8 +122,55 @@ export function App() {
 
           <Image src={port} />
         </div>
+        
+        <Section className="justify-center flex">
+          <Lottie className="w-[48vw]" loop animationData={build}/>
+        </Section>
 
-        <Section className="bg-black text-base mt-[10vh] h-auto flex flex-col gap-4">
+        <Section className="text-4xl mt-[10vh] h-auto flex flex-col gap-4">
+          <div className="flex gap-8 flex-row w-full justify-evenly">
+            {[
+              { icon: "fab fa-js", label: "JavaScript" },
+              { icon: "fab fa-react", label: "ReactJS" },
+              { icon: "fab fa-node", label: "NodeJS" },
+              { icon: "fab fa-npm", label: "npm" },
+              { icon: "fas fa-database", label: "Database" },
+              { icon: "fab fa-aws", label: "AWS" },
+              { icon: "fab fa-python", label: "Python" },
+              { icon: "fab fa-docker", label: "Docker" },
+            ].map((item) => (
+              <div className="flex flex-col items-center gap-2">
+                <i className={`${item.icon} hover:text-cyan-500`} />
+                <span className="text-base opacity-80">{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section className="mt-[10vh]">
+          {[
+            { progressPercentage: 0.8, Stack: "batata" },
+            { progressPercentage: 0.5, Stack: "Sei la 2" },
+            { progressPercentage: 0.9, Stack: "Sei la 2" },
+          ].map((exp, i) => {
+            const progressStyle = {
+              width: `calc(100% * ${exp.progressPercentage})`,
+            };
+            return (
+              <div key={i} className="leading-[3.5vw]">
+                <p>{exp.Stack}</p>
+                <div className="h-[20px] relative rounded-[25px] bg-[rgb(243,239,239)]">
+                  <span
+                    className="block relative overflow-hidden bg-[#aaa5ff] h-full rounded-[20px]"
+                    style={progressStyle}
+                  ></span>
+                </div>
+              </div>
+            );
+          })}
+        </Section>
+
+        <Section className="bg-[#1e1e1e] text-base mt-[10vh] h-auto flex flex-col gap-4">
           <div className="text-3xl text-center text-teal-400 font-semibold">
             EDUCATION
           </div>
@@ -170,7 +216,7 @@ export function App() {
           </Modal>
         </Section>
 
-        <Section className="bg-black text-base mt-[20vh] h-auto ">
+        <Section className="text-base mt-[20vh] h-auto">
           <div className="text-3xl text-center text-teal-400 font-semibold">
             {" "}
             CERTIFICATE{" "}
@@ -198,28 +244,8 @@ export function App() {
           </div>
         </Section>
 
-        <Section className=" border-none mt-[20vh] h-auto">
-          <div>
-            <div className="text-3xl text-center text-teal-400 font-semibold">
-              {" "}
-              TOOLS{" "}
-            </div>
-            <ToolsChart />
-          </div>
-        </Section>
-
-        <Section className=" border-none mt-[20vh] h-auto">
-          <div>
-            <div className="text-3xl text-center text-teal-400 font-semibold">
-              {" "}
-              TECHNOLOGY{" "}
-            </div>
-            <TechChart />
-          </div>
-        </Section>
-
-        <div className="flex gap-8 mt-[20vh] items-center">
-          <Section className="bg-black w-1/2 text-base">
+        <div className="flex gap-8  mt-[20vh] items-center">
+          <Section className="w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               POST TRACK
               <Image src={posttrack} />
@@ -251,7 +277,7 @@ export function App() {
             </div>
           </Section>
 
-          <Section className="bg-black w-1/2 text-base">
+          <Section className="w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               Shopping Center
               <Image src={shopp} />
@@ -284,7 +310,7 @@ export function App() {
               </a>
             </div>
           </Section>
-          <Section className="bg-black w-1/2 text-base">
+          <Section className="w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               React
               <Image src={react} />
@@ -317,7 +343,7 @@ export function App() {
               </a>
             </div>
           </Section>
-          <Section className="bg-black w-1/2 text-base">
+          <Section className="w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               Pizza Shopp
               <Image src={pizzas} />
@@ -352,6 +378,39 @@ export function App() {
             </div>
           </Section>
         </div>
+
+        <div className="flex gap-8 h-auto  mt-[10vh] items-center">
+          <Section className=" border-none w-1/2  mt-[10vh] h-auto">
+            <div>
+              <div className="text-3xl text-center text-teal-400 font-semibold">
+                {" "}
+                TOOLS{" "}
+              </div>
+              <ToolsChart />
+            </div>
+          </Section>
+
+          <Section className=" border-none w-1/2  mt-[10vh] h-auto">
+            <div>
+              <div className="text-3xl text-center text-teal-400 font-semibold">
+                {" "}
+                TECHNOLOGY{" "}
+              </div>
+              <TechChart />
+            </div>
+          </Section>
+        </div>
+
+        {/* <div className="flex gap-8 mt-[20vh] items-center">
+          <Section className="border-none w-1/2 text-base mt-4 h-auto">
+            <Skills />
+          </Section>
+          <Section className="border-none w-1/2 text-base mt-4 h-auto">
+            <SkillsSideB />
+          </Section>
+        </div> */}
+
+        <Lottie loop animationData={codingPerson} />
       </div>
     </div>
   );

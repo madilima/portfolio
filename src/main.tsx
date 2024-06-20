@@ -5,15 +5,18 @@ import { App } from "./App.tsx";
 import { App as AntdApp, ConfigProvider, theme } from "antd";
 
 import "./global.css";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ConfigProvider theme={{
       algorithm:theme.darkAlgorithm
     }}>
-      <AntdApp>
+     <BrowserRouter basename="/portfolio">
+     <AntdApp>
         <App />
       </AntdApp>
+     </BrowserRouter>
     </ConfigProvider>
   </React.StrictMode>
 );

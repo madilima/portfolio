@@ -4,7 +4,18 @@ export function Certificate() {
   return (
     <div>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
+        <a
+          href="https://cursos.alura.com.br/certificate/05537708-0ec0-4a02-aaad-0ed2354c1a08?lang=en"
+          className="text-teal-400"
+        >
+          Cloud Onboarding:
+        </a>{" "}
+        Working with Top Providers. Creating virtual machines on AWS, Google
+        Cloud and Azure
+      </p>
+      <p>
+        <CheckOutlined />{" "}
         <a
           href=" https://app.rocketseat.com.br/certificates/a198efa0-892a-4033-a79e-3c43e3f0599b"
           className="text-teal-400"
@@ -16,7 +27,7 @@ export function Certificate() {
         in user data, Exception Handling and back-end deployment.
       </p>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
         <a
           href="https://app.rocketseat.com.br/certificates/e7c76ae8-5713-4700-80b4-98f904785e86
 "
@@ -28,7 +39,7 @@ export function Certificate() {
         Authentication with Flask-Login, Error Handling and Deploy
       </p>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
         <a
           href="https://app.rocketseat.com.br/certificates/49a2beb6-db5e-4734-9b97-1863604aef5d
 "
@@ -39,7 +50,7 @@ export function Certificate() {
         fundamentals of web programming, HTML, CSS, Javascript, Git and Github.
       </p>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
         <a
           href="https://app.rocketseat.com.br/certificates/a6afed34-d437-4cca-bb19-2fbe64688247
 "
@@ -52,7 +63,7 @@ export function Certificate() {
         dependency managers; data encryption; error handling.
       </p>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
         <a
           href="https://app.rocketseat.com.br/certificates/64bb416a-db06-4955-b656-333ad856a6c5"
           className="text-teal-400"
@@ -64,7 +75,7 @@ export function Certificate() {
         files in ReactJS; Run a ReactJS project.
       </p>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
         <a
           href="https://app.rocketseat.com.br/certificates/6a0ca35b-45fa-42a2-be86-e9652716acc5"
           className="text-teal-400"
@@ -78,7 +89,7 @@ export function Certificate() {
         Cloud Computing.
       </p>
       <p>
-        <CheckOutlined />
+        <CheckOutlined />{" "}
         <a
           href="https://app.rocketseat.com.br/certificates/e6f9bd38-a8e1-440a-bc0e-fae7675996a1"
           className="text-teal-400"

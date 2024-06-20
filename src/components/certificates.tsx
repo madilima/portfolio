@@ -18,6 +18,8 @@ import reactjs from "./../assets/img/reactjs.png";
 import reactnlw from "./../assets/img/reactnlw.png";
 import reactnt from "./../assets/img/reactnt.png";
 import rf from "./../assets/img/rf.png";
+import cloudC from "./../assets/img/cloudC.png"
+import mysql from "./../assets/img/mysql.png"
 
 export function Certificates() {
   const [current, setCurrent] = useState(1);
@@ -35,32 +37,35 @@ export function Certificates() {
   >
     <div>
       {current === 1 ? (<div className="flex gap-8">
-        <Image src={back}  width={400} />
-        <Image src={delving}  width={400} />
-        <Image src={dep}  width={400} />
+        <Image src={cloudC} width={400} />
+        <Image src={mysql} width={400} />
+        <Image src={python}  width={400} />
         <Image src={java}  width={400} />
       </div>) : null}
       {current === 2 ? (<div className="flex gap-8">
+        <Image src={back}  width={400} />
         <Image src={devops}  width={400} />
         <Image src={fullstack}  width={400} />
         <Image src={net}  width={400} />
-        <Image src={front}  width={400} />
       </div>) : null}
       {current === 3 ? (<div className="flex gap-8">
         <Image src={discover}  width={400} />
         <Image src={nlwp}  width={400} />
-        <Image src={http}  width={400} />
+        <Image src={delving}  width={400} />
         <Image src={node}  width={400} />
       </div>) : null}
       {current === 4 ? (<div className="flex gap-8">
-        <Image src={python}  width={400} />
+        <Image src={dep}  width={400} />
         <Image src={reactjs}  width={400} />
         <Image src={reactnlw}  width={400} />
         <Image src={reactnt}  width={400} />
       </div>) : null}
       {current === 5 ? (<div className="flex gap-8">
+        <Image src={front}  width={400} />
+        <Image src={http}  width={200} />
         <Image src={rf}  width={200} />
         <Image src={sql}  width={195} />
+        
       </div>) : null}
       <Pagination className="mt-4 text-center" current={current} onChange={onChange} total={50} />
     </div>

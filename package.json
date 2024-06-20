@@ -21,9 +21,11 @@
     "clsx": "^2.1.1",
     "gsap": "^3.12.5",
     "lib-utils-ts": "^0.0.0-test",
+    "lottie-react": "^2.4.0",
     "lucide-react": "^0.394.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1",
     "rechart": "^0.0.1",
     "recharts": "^2.12.7",
     "tailwind-merge": "^2.3.0"

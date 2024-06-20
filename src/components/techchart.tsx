@@ -42,12 +42,6 @@ export function TechChart() {
           stroke: colors.cyan[600],
         },
         {
-          label: "React Native",
-          value: 20,
-          color: colors.sky[800],
-          stroke: colors.sky[950],
-        },
-        {
           label: "PostgreSQL",
           value: 20,
           color: colors.blue[400],
