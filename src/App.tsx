@@ -19,8 +19,8 @@ import {
 } from "@ant-design/icons";
 import { Button, Modal, Image } from "antd";
 import Lottie from "lottie-react";
-import codingPerson from "./assets/codingPerson.json"
-import build from "./assets/build.json"
+import codingPerson from "./assets/codingPerson.json";
+import build from "./assets/build.json";
 import port from "./assets/img/port.png";
 import { Subjects } from "./components/subjects";
 import { Certificates } from "./components/certificates";
@@ -31,8 +31,8 @@ import posttrack from "./assets/projects/img/posttrack.png";
 import pizzas from "./assets/projects/img/pizzas.png";
 import shopp from "./assets/projects/img/shopp.png";
 import react from "./assets/projects/img/react.png";
-// import { Skills } from "./components/skills/skill";
-// import { SkillsSideB } from "./components/skills/skillb";
+import { Skills } from "./components/skills/skill";
+
 
 injectOneko();
 
@@ -99,7 +99,7 @@ export function App() {
         </Section>
 
         <div className="flex gap-8 mt-4 items-center">
-          <Section className="w-1/2 text-base">
+          <Section className="bg-[#1e1e1e] w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               ABOUT ME
             </div>
@@ -122,13 +122,18 @@ export function App() {
 
           <Image src={port} />
         </div>
-        
-        <Section className="justify-center flex">
-          <Lottie className="w-[48vw]" loop animationData={build}/>
+
+        <Section className=" border-hidden justify-center flex">
+          <Lottie className="w-[40vw]" loop animationData={build} />
         </Section>
 
         <Section className="text-4xl mt-[10vh] h-auto flex flex-col gap-4">
-          <div className="flex gap-8 flex-row w-full justify-evenly">
+          <div className="text-base">
+            Development and analysis student, who wants to learn a little bit of
+            everything and explore every tech stack.
+            <p> What I've been exploring in the last few months:</p>
+          </div>
+          <div className="flex mt-6 gap-8 flex-row w-full justify-evenly">
             {[
               { icon: "fab fa-js", label: "JavaScript" },
               { icon: "fab fa-react", label: "ReactJS" },
@@ -148,16 +153,19 @@ export function App() {
         </Section>
 
         <Section className="mt-[10vh]">
+          <div className="text-3xl text-center text-teal-400 font-semibold">
+            PROFICIENCY
+          </div>
           {[
-            { progressPercentage: 0.8, Stack: "batata" },
-            { progressPercentage: 0.5, Stack: "Sei la 2" },
-            { progressPercentage: 0.9, Stack: "Sei la 2" },
+            { progressPercentage: 0.8, Stack: "Frontend/Design" },
+            { progressPercentage: 0.7, Stack: "Cloud Computing" },
+            { progressPercentage: 0.7, Stack: "Programming" },
           ].map((exp, i) => {
             const progressStyle = {
               width: `calc(100% * ${exp.progressPercentage})`,
             };
             return (
-              <div key={i} className="leading-[3.5vw]">
+              <div key={i} className="leading-[3.5vw] mt-8">
                 <p>{exp.Stack}</p>
                 <div className="h-[20px] relative rounded-[25px] bg-[rgb(243,239,239)]">
                   <span
@@ -216,7 +224,7 @@ export function App() {
           </Modal>
         </Section>
 
-        <Section className="text-base mt-[20vh] h-auto">
+        <Section className="bg-[#1e1e1e] text-base mt-[20vh] h-auto">
           <div className="text-3xl text-center text-teal-400 font-semibold">
             {" "}
             CERTIFICATE{" "}
@@ -244,7 +252,7 @@ export function App() {
           </div>
         </Section>
 
-        <div className="flex gap-8  mt-[20vh] items-center">
+        <div className="bg-[#1e1e1e] flex gap-8  mt-[20vh] items-center">
           <Section className="w-1/2 text-base">
             <div className="text-3xl text-center text-teal-400 font-semibold">
               POST TRACK
@@ -401,16 +409,22 @@ export function App() {
           </Section>
         </div>
 
-        {/* <div className="flex gap-8 mt-[20vh] items-center">
-          <Section className="border-none w-1/2 text-base mt-4 h-auto">
+        <Section className="bg-[#1e1e1e] border-n flex gap-8 mt-[20vh] items-center">
+          <div className="text-3xl text-center text-teal-400 font-semibold">
+            <p>S</p>
+            <p>K</p>
+            <p>I</p>
+            <p>L</p>
+            <p>L</p>
+            <p>S</p>
+          </div>
+          <div className="flex-row w-full justify-evenly">
             <Skills />
-          </Section>
-          <Section className="border-none w-1/2 text-base mt-4 h-auto">
-            <SkillsSideB />
-          </Section>
-        </div> */}
-
-        <Lottie loop animationData={codingPerson} />
+          </div>
+          <div>
+            <Lottie className="w-[34vw] flex " loop animationData={codingPerson} />
+          </div>
+        </Section>
       </div>
     </div>
   );
